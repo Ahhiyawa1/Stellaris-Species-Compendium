@@ -1,0 +1,7 @@
+eldor_hathian = {
+	name = Eldor-Hathians 
+
+	sets = {
+		"eldor_hathian"
+	}
+}

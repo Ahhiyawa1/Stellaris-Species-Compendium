@@ -1,0 +1,7 @@
+sydaunii = {
+	name = Sydaunians
+
+	sets = {
+		"sydaunii"
+	}
+}

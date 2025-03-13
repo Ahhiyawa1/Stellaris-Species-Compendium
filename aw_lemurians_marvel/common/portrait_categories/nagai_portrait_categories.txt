@@ -1,0 +1,7 @@
+nagai = {
+	name = Nagai # (Marvel Star Wars 70's Version) 
+
+	sets = {
+		"nagai"
+	}
+}

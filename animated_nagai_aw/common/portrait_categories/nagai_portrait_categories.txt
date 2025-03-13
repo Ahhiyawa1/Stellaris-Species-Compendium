@@ -1,0 +1,7 @@
+nagai = {
+	name = Nagai 
+
+	sets = {
+		"nagai"
+	}
+}

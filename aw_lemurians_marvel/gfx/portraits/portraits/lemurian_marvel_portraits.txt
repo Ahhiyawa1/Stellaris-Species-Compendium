@@ -1,0 +1,166 @@
+portraits = {
+	# Lemurian (Marvel, Variant 1)
+	lemurian_marvel_female_01 = {
+		entity = "portrait_human_female_entity"
+		clothes_selector = "lemurian_marvel_female_clothes_01"
+		attachment_selector = "lemurian_marvel_female_hair_01"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/lemurian_marvel/lemurian_marvel_female_body_01.dds"
+		}
+	}
+	lemurian_marvel_female_02 = {
+		entity = "portrait_human_female_entity"
+		clothes_selector = "lemurian_marvel_female_clothes_01"
+		attachment_selector = "lemurian_marvel_female_hair_01"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/lemurian_marvel/lemurian_marvel_female_body_02.dds"
+		}
+	}
+	lemurian_marvel_female_03 = {
+		entity = "portrait_human_female_entity"
+		clothes_selector = "lemurian_marvel_female_clothes_01"
+		attachment_selector = "lemurian_marvel_female_hair_01"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/lemurian_marvel/lemurian_marvel_female_body_03.dds"
+		}
+	}
+	lemurian_marvel_male_01 = {
+		entity = "portrait_human_male_entity"
+		clothes_selector = "lemurian_marvel_male_clothes_01"
+		attachment_selector = "lemurian_marvel_male_hair_01"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_body_01.dds"
+		}
+	}
+	lemurian_marvel_male_02 = {
+		entity = "portrait_human_male_entity"
+		clothes_selector = "lemurian_marvel_male_clothes_01"
+		attachment_selector = "lemurian_marvel_male_hair_01"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_body_02.dds"
+		}
+	}
+	lemurian_marvel_male_03 = {
+		entity = "portrait_human_male_entity"
+		clothes_selector = "lemurian_marvel_male_clothes_01"
+		attachment_selector = "lemurian_marvel_male_hair_01"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_body_03.dds"
+		}
+	}
+}
+
+portrait_groups = {
+	lemurian_marvel = {
+		default = lemurian_marvel_male_02
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					lemurian_marvel_male_02
+					lemurian_marvel_male_03
+					lemurian_marvel_male_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					lemurian_marvel_female_01
+					lemurian_marvel_female_02
+					lemurian_marvel_female_03
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					lemurian_marvel_male_01
+					lemurian_marvel_male_02
+					lemurian_marvel_male_03
+					lemurian_marvel_female_01
+					lemurian_marvel_female_02
+					lemurian_marvel_female_03
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					lemurian_marvel_male_01
+					lemurian_marvel_male_02
+					lemurian_marvel_male_03
+					lemurian_marvel_female_01
+					lemurian_marvel_female_02
+					lemurian_marvel_female_03
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, commanders, officials
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					lemurian_marvel_female_01
+					lemurian_marvel_female_02
+					lemurian_marvel_female_03
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					lemurian_marvel_male_01
+					lemurian_marvel_male_03				
+					lemurian_marvel_male_02
+				}
+			}
+		}
+	
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					lemurian_marvel_female_01
+					lemurian_marvel_female_02
+					lemurian_marvel_female_03
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					lemurian_marvel_male_01
+					lemurian_marvel_male_03
+					lemurian_marvel_male_02
+				}
+			}
+		}
+	}
+}

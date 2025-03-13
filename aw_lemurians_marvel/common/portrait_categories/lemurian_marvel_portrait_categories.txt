@@ -1,0 +1,7 @@
+lemurian_marvel = {
+	name = Lemurian # (Marvel Version) 
+
+	sets = {
+		"lemurian_marvel"
+	}
+}

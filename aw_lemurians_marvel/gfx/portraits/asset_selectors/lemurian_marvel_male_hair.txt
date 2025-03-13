@@ -1,0 +1,101 @@
+# This is a template which multiple species can use. 
+ 
+lemurian_marvel_male_hair_01 = {
+	
+	game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+	}
+	
+	#pop scope
+	pop = { #for a specific pop
+		random = {
+			list = {
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_02.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_03.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_04.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_05.dds"
+			}
+		}	
+	}
+	
+	#leader scope
+	leader = { #scientists, commanders, officials
+		random = {
+			trigger = { leader_class = commander }
+			list = {
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_02.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_03.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_04.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_05.dds"
+			}
+		}
+		random = {
+			trigger = { leader_class = scientist }
+			list = {
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_02.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_03.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_04.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_05.dds"
+			}
+		}
+		random = {
+			trigger = { leader_class = official }
+			list = {
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_02.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_03.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_04.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_05.dds"
+			}
+		}
+	}
+ 
+	#leader scope 
+	ruler = { #for rulers
+		#default = 
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_04.dds"
+		random = {
+			trigger = { 
+				owner = { has_militarist_government = yes }
+			}
+			list = {
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_02.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_03.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_04.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_05.dds"
+			}
+		}
+		random = {
+			trigger = { 
+				owner = { has_spiritualist_government = yes }
+			}
+			list = {
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_04.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_05.dds"
+			}
+		}
+		random = {
+			trigger = { 
+				owner = {
+					OR = {
+						has_authority = auth_oligarchic
+						has_authority = auth_democratic
+						has_authority = auth_imperial
+						has_authority = auth_dictatorial
+						has_primitive_government = yes
+						has_government = gov_stagnant_ascendancy
+					}
+				}
+			}
+			list = {
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_02.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_03.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_04.dds"
+				"gfx/models/portraits/lemurian_marvel/lemurian_marvel_male_hair_black_style_05.dds"
+			}
+		}
+	}
+}
+ 

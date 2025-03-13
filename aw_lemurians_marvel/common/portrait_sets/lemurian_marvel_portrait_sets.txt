@@ -1,0 +1,14 @@
+lemurian_marvel = { 
+	species_class = Lemurian # (Marvel Version)
+	portraits = { 
+		"lemurian_marvel"
+	}
+	conditional_portraits = {
+		portraits = {
+
+		}
+	}
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+	}
+}

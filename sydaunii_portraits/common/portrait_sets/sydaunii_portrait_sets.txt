@@ -1,0 +1,14 @@
+sydaunii = { 
+	species_class = Sydaunii
+	portraits = { 
+		"sydaunii"
+	}
+	conditional_portraits = {
+		portraits = {
+
+		}
+	}
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+	}
+}

@@ -1,0 +1,14 @@
+nagai = { 
+	species_class = Nagai
+	portraits = { 
+		"nagai"
+	}
+	conditional_portraits = {
+		portraits = {
+
+		}
+	}
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+	}
+}

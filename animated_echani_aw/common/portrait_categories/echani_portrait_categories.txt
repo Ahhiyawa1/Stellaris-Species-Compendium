@@ -1,0 +1,7 @@
+echani = {
+	name = Echani 
+
+	sets = {
+		"echani"
+	}
+}

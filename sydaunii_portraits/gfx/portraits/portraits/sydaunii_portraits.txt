@@ -1,0 +1,166 @@
+portraits = {
+	# Sydaunii
+	sydaunii_female_01 = {
+		entity = "portrait_human_female_entity"
+		clothes_selector = "sydaunii_female_clothes_01"
+		attachment_selector = "sydaunii_female_hair_01"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/sydaunii/sydaunii_new/sydaunii_female_body_01.dds"
+		}
+	}
+	sydaunii_female_02 = {
+		entity = "portrait_human_female_entity"
+		clothes_selector = "sydaunii_female_clothes_01"
+		attachment_selector = "sydaunii_female_hair_01"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/sydaunii/sydaunii_new/sydaunii_female_body_02.dds"
+		}
+	}
+	sydaunii_female_03 = {
+		entity = "portrait_human_female_entity"
+		clothes_selector = "sydaunii_female_clothes_01"
+		attachment_selector = "sydaunii_female_hair_01"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/sydaunii/sydaunii_new/sydaunii_female_body_03.dds"
+		}
+	}
+	sydaunii_male_01 = {
+		entity = "portrait_human_male_entity"
+		clothes_selector = "sydaunii_male_clothes_01"
+		attachment_selector = "sydaunii_male_hair_01"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/sydaunii/sydaunii_new/sydaunii_male_body_01.dds"
+		}
+	}
+	sydaunii_male_02 = {
+		entity = "portrait_human_male_entity"
+		clothes_selector = "sydaunii_male_clothes_01"
+		attachment_selector = "sydaunii_male_hair_01"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/sydaunii/sydaunii_new/sydaunii_male_body_02.dds"
+		}
+	}
+	sydaunii_male_03 = {
+		entity = "portrait_human_male_entity"
+		clothes_selector = "sydaunii_male_clothes_01"
+		attachment_selector = "sydaunii_male_hair_01"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/sydaunii/sydaunii_new/sydaunii_male_body_03.dds"
+		}
+	}
+}
+
+portrait_groups = {
+	sydaunii = {
+		default = sydaunii_male_02
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					sydaunii_male_02
+					sydaunii_male_03
+					sydaunii_male_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					sydaunii_female_01
+					sydaunii_female_02
+					sydaunii_female_03
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					sydaunii_male_01
+					sydaunii_male_02
+					sydaunii_male_03
+					sydaunii_female_01
+					sydaunii_female_02
+					sydaunii_female_03
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					sydaunii_male_01
+					sydaunii_male_02
+					sydaunii_male_03
+					sydaunii_female_01
+					sydaunii_female_02
+					sydaunii_female_03
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, commanders, officials
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					sydaunii_female_01
+					sydaunii_female_02
+					sydaunii_female_03
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					sydaunii_male_01
+					sydaunii_male_03				
+					sydaunii_male_02
+				}
+			}
+		}
+	
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					sydaunii_female_01
+					sydaunii_female_02
+					sydaunii_female_03
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					sydaunii_male_01
+					sydaunii_male_03
+					sydaunii_male_02
+				}
+			}
+		}
+	}
+}
