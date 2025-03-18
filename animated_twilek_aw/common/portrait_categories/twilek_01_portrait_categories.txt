@@ -1,0 +1,7 @@
+twilek_01 = {
+	name = Twi'leks
+
+	sets = {
+		"twilek_01"
+	}
+}

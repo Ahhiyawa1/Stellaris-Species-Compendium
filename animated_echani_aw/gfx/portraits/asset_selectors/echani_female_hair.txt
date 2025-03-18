@@ -13,8 +13,7 @@ echani_female_hair_01 = {
 	pop = { #for a specific pop
 		random = {
 			list = {
-				"gfx/models/portraits/echani/echani_male_hair_black_style_02.dds"
-				"gfx/models/portraits/echani/echani_male_hair_black_style_03.dds"
+				"gfx/models/portraits/echani/echani_female_hair_black_style_05.dds"
 				"gfx/models/portraits/echani/echani_female_hair_black_style_04.dds"
 				"gfx/models/portraits/echani/echani_female_hair_black_style_06.dds"
 			}
@@ -26,8 +25,7 @@ echani_female_hair_01 = {
 		random = {
 			trigger = { leader_class = commander }
 			list = {
-				"gfx/models/portraits/echani/echani_male_hair_black_style_02.dds"
-				"gfx/models/portraits/echani/echani_male_hair_black_style_03.dds"
+				"gfx/models/portraits/echani/echani_female_hair_black_style_05.dds"
 				"gfx/models/portraits/echani/echani_female_hair_black_style_04.dds"
 				"gfx/models/portraits/echani/echani_female_hair_black_style_06.dds"
 			}
@@ -35,8 +33,7 @@ echani_female_hair_01 = {
 		random = {
 			trigger = { leader_class = scientist }
 			list = {
-				"gfx/models/portraits/echani/echani_male_hair_black_style_02.dds"
-				"gfx/models/portraits/echani/echani_male_hair_black_style_03.dds"
+				"gfx/models/portraits/echani/echani_female_hair_black_style_05.dds"
 				"gfx/models/portraits/echani/echani_female_hair_black_style_04.dds"
 				"gfx/models/portraits/echani/echani_female_hair_black_style_06.dds"
 			}
@@ -44,8 +41,7 @@ echani_female_hair_01 = {
 		random = {
 			trigger = { leader_class = official }
 			list = {
-				"gfx/models/portraits/echani/echani_male_hair_black_style_02.dds"
-				"gfx/models/portraits/echani/echani_male_hair_black_style_03.dds"
+				"gfx/models/portraits/echani/echani_female_hair_black_style_05.dds"
 				"gfx/models/portraits/echani/echani_female_hair_black_style_04.dds"
 				"gfx/models/portraits/echani/echani_female_hair_black_style_06.dds"
 			}
@@ -61,8 +57,7 @@ echani_female_hair_01 = {
 				owner = { has_militarist_government = yes }
 			}
 			list = {
-				"gfx/models/portraits/echani/echani_male_hair_black_style_02.dds"
-				"gfx/models/portraits/echani/echani_male_hair_black_style_03.dds"
+				"gfx/models/portraits/echani/echani_female_hair_black_style_05.dds"
 				"gfx/models/portraits/echani/echani_female_hair_black_style_04.dds"
 				"gfx/models/portraits/echani/echani_female_hair_black_style_06.dds"
 			}
@@ -90,8 +85,7 @@ echani_female_hair_01 = {
 				}
 			}
 			list = {
-				"gfx/models/portraits/echani/echani_male_hair_black_style_02.dds"
-				"gfx/models/portraits/echani/echani_male_hair_black_style_03.dds"
+				"gfx/models/portraits/echani/echani_female_hair_black_style_05.dds"
 				"gfx/models/portraits/echani/echani_female_hair_black_style_04.dds"
 				"gfx/models/portraits/echani/echani_female_hair_black_style_06.dds"
 			}

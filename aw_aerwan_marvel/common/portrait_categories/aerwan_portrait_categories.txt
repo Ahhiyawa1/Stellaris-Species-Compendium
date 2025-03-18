@@ -1,0 +1,7 @@
+aerwan = {
+	name = Aerwan 
+
+	sets = {
+		"aerwan"
+	}
+}

@@ -1,0 +1,14 @@
+twilek_01 = { 
+	species_class = Twileks
+	portraits = { 
+		"twilek_01"
+	}
+	conditional_portraits = {
+		portraits = {
+
+		}
+	}
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+	}
+}

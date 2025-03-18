@@ -1,0 +1,166 @@
+portraits = {
+	# Aerwan (Marvel, Variant 1)
+	aerwan_female_01 = {
+		entity = "portrait_human_female_entity"
+		clothes_selector = "aerwan_female_clothes_01"
+		attachment_selector = "no_texture"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/aerwan/aerwan_female_body_01.dds"
+		}
+	}
+	aerwan_female_02 = {
+		entity = "portrait_human_female_entity"
+		clothes_selector = "aerwan_female_clothes_01"
+		attachment_selector = "no_texture"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/aerwan/aerwan_female_body_02.dds"
+		}
+	}
+	aerwan_female_03 = {
+		entity = "portrait_human_female_entity"
+		clothes_selector = "aerwan_female_clothes_01"
+		attachment_selector = "no_texture"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/aerwan/aerwan_female_body_03.dds"
+		}
+	}
+	aerwan_male_01 = {
+		entity = "portrait_human_male_entity"
+		clothes_selector = "aerwan_male_clothes_01"
+		attachment_selector = "no_texture"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/aerwan/aerwan_male_body_01.dds"
+		}
+	}
+	aerwan_male_02 = {
+		entity = "portrait_human_male_entity"
+		clothes_selector = "aerwan_male_clothes_01"
+		attachment_selector = "no_texture"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/aerwan/aerwan_male_body_02.dds"
+		}
+	}
+	aerwan_male_03 = {
+		entity = "portrait_human_male_entity"
+		clothes_selector = "aerwan_male_clothes_01"
+		attachment_selector = "no_texture"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/aerwan/aerwan_male_body_03.dds"
+		}
+	}
+}
+
+portrait_groups = {
+	aerwan = {
+		default = aerwan_male_02
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					aerwan_male_02
+					aerwan_male_03
+					aerwan_male_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					aerwan_female_01
+					aerwan_female_02
+					aerwan_female_03
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					aerwan_male_01
+					aerwan_male_02
+					aerwan_male_03
+					aerwan_female_01
+					aerwan_female_02
+					aerwan_female_03
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					aerwan_male_01
+					aerwan_male_02
+					aerwan_male_03
+					aerwan_female_01
+					aerwan_female_02
+					aerwan_female_03
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, commanders, officials
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					aerwan_female_01
+					aerwan_female_02
+					aerwan_female_03
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					aerwan_male_01
+					aerwan_male_03				
+					aerwan_male_02
+				}
+			}
+		}
+	
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					aerwan_female_01
+					aerwan_female_02
+					aerwan_female_03
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					aerwan_male_01
+					aerwan_male_03
+					aerwan_male_02
+				}
+			}
+		}
+	}
+}

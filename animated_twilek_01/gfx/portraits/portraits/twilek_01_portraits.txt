@@ -1,0 +1,188 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+
+	# Female
+	twilek_01_female_blue 	= {	entity = "humanoid_05_female_01_entity"	clothes_selector = "twilek_01_female_clothes" attachment_selector = "twilek_01_female_01_hair_blue"		greeting_sound = "humanoid_female_greeting_a"
+	character_textures = { "gfx/models/portraits/twilek_01/twilek_humanoid_05_female_body_01_blue.dds" }
+	}
+	twilek_01_female_teal 	= {	entity = "humanoid_05_female_01_entity"	clothes_selector = "twilek_01_female_clothes" attachment_selector = "twilek_01_female_01_hair_teal"		greeting_sound = "humanoid_female_greeting_a"
+	character_textures = { "gfx/models/portraits/twilek_01/twilek_humanoid_05_female_body_01_teal.dds" }
+	}
+	twilek_01_female_green 	= {	entity = "humanoid_05_female_01_entity"	clothes_selector = "twilek_01_female_clothes" attachment_selector = "twilek_01_female_01_hair_green"		greeting_sound = "humanoid_female_greeting_a"
+	character_textures = { "gfx/models/portraits/twilek_01/twilek_humanoid_05_female_body_01_green.dds" }
+	}
+	twilek_01_female_orange 	= {	entity = "humanoid_05_female_01_entity"	clothes_selector = "twilek_01_female_clothes" attachment_selector = "twilek_01_female_01_hair_orange"		greeting_sound = "humanoid_female_greeting_a"
+	character_textures = { "gfx/models/portraits/twilek_01/twilek_humanoid_05_female_body_01_orange.dds" }
+	}
+	twilek_01_female_white 	= {	entity = "humanoid_05_female_01_entity"	clothes_selector = "twilek_01_female_clothes" attachment_selector = "twilek_01_female_01_hair_white"		greeting_sound = "humanoid_female_greeting_a"
+	character_textures = { "gfx/models/portraits/twilek_01/twilek_humanoid_05_female_body_01_white.dds" }
+	}
+	twilek_01_female_pink	= {	entity = "humanoid_05_female_01_entity"	clothes_selector = "twilek_01_female_clothes" attachment_selector = "twilek_01_female_01_hair_pink"		greeting_sound = "humanoid_female_greeting_a"
+	character_textures = { "gfx/models/portraits/twilek_01/twilek_humanoid_05_female_body_01_pink.dds" }
+	}
+
+	# Male
+	twilek_01_male_blue 	= {	entity = "humanoid_05_female_01_entity"	clothes_selector = "twilek_01_male_clothes" attachment_selector = "twilek_01_female_01_hair_blue"		greeting_sound = "humanoid_male_greeting_d"
+	character_textures = { "gfx/models/portraits/twilek_01/twilek_humanoid_05_male_body_01_blue.dds" }
+	}
+	twilek_01_male_green 	= {	entity = "humanoid_05_female_01_entity"	clothes_selector = "twilek_01_male_clothes" attachment_selector = "twilek_01_female_01_hair_green"		greeting_sound = "humanoid_male_greeting_d"
+	character_textures = { "gfx/models/portraits/twilek_01/twilek_humanoid_05_male_body_01_green.dds" }
+	}
+	twilek_01_male_teal 	= {	entity = "humanoid_05_female_01_entity"	clothes_selector = "twilek_01_male_clothes" attachment_selector = "twilek_01_female_01_hair_teal"		greeting_sound = "humanoid_male_greeting_d"
+	character_textures = { "gfx/models/portraits/twilek_01/twilek_humanoid_05_male_body_01_teal.dds" }
+	}
+	twilek_01_male_orange 	= {	entity = "humanoid_05_female_01_entity"	clothes_selector = "twilek_01_male_clothes" attachment_selector = "twilek_01_female_01_hair_orange"		greeting_sound = "humanoid_male_greeting_d"
+	character_textures = { "gfx/models/portraits/twilek_01/twilek_humanoid_05_male_body_01_orange.dds" }
+	}
+	twilek_01_male_white 	= {	entity = "humanoid_05_female_01_entity"	clothes_selector = "twilek_01_male_clothes" attachment_selector = "twilek_01_female_01_hair_white"		greeting_sound = "humanoid_male_greeting_d"
+		character_textures = { "gfx/models/portraits/twilek_01/twilek_humanoid_05_male_body_01_white.dds" }
+	}
+	twilek_01_male_pink 	= {	entity = "humanoid_05_female_01_entity"	clothes_selector = "twilek_01_male_clothes" attachment_selector = "twilek_01_female_01_hair_pink"		greeting_sound = "humanoid_male_greeting_d"
+		character_textures = { "gfx/models/portraits/twilek_01/twilek_humanoid_05_male_body_01_pink.dds" }
+	}
+}
+
+portrait_groups = {
+	twilek = {
+		default = twilek_01_female_green
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					twilek_01_male_blue
+					twilek_01_male_teal
+					twilek_01_male_orange
+					twilek_01_male_green
+					twilek_01_male_white
+					twilek_01_male_pink
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					twilek_01_female_blue
+					twilek_01_female_teal
+					twilek_01_female_orange
+					twilek_01_female_white
+					twilek_01_female_green
+					twilek_01_female_pink
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					twilek_01_female_blue
+					twilek_01_female_teal
+					twilek_01_female_orange
+					twilek_01_female_white
+					twilek_01_female_green
+					twilek_01_female_pink
+					twilek_01_male_blue
+					twilek_01_male_teal
+					twilek_01_male_orange
+					twilek_01_male_green
+					twilek_01_male_white
+					twilek_01_male_pink
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					twilek_01_female_blue
+					twilek_01_female_teal
+					twilek_01_female_orange
+					twilek_01_female_white
+					twilek_01_female_green
+					twilek_01_female_pink
+					twilek_01_male_blue
+					twilek_01_male_teal
+					twilek_01_male_orange
+					twilek_01_male_green
+					twilek_01_male_white
+					twilek_01_male_pink
+				}
+			}
+		}
+
+		#leader scope
+		leader = { #scientists, commanders, officials
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					twilek_01_female_blue
+					twilek_01_female_teal
+					twilek_01_female_orange
+					twilek_01_female_white
+					twilek_01_female_green
+					twilek_01_female_pink
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					twilek_01_male_blue
+					twilek_01_male_teal
+					twilek_01_male_orange
+					twilek_01_male_green
+					twilek_01_male_white
+					twilek_01_male_pink
+				}
+			}
+		}
+
+
+		#leader scope
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					twilek_01_female_blue
+					twilek_01_female_teal
+					twilek_01_female_orange
+					twilek_01_female_white
+					twilek_01_female_green
+					twilek_01_female_pink
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					twilek_01_male_blue
+					twilek_01_male_teal
+					twilek_01_male_orange
+					twilek_01_male_green
+					twilek_01_male_white
+					twilek_01_male_pink
+				}
+			}
+		}
+	}
+}

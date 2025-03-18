@@ -1,0 +1,28 @@
+# This is a template which multiple species can use.
+twilek_female_01_hair_green = {
+	default = "gfx/models/portraits/twilek_01/twilek_humanoid_05_female_hair_green.dds"
+
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/twilek_01/twilek_humanoid_05_female_hair_green.dds"
+	}
+
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/twilek_01/twilek_humanoid_05_female_hair_green.dds"
+	}
+
+	#pop scope
+	pop = { #for a specific pop
+		default = "gfx/models/portraits/twilek_01/twilek_humanoid_05_female_hair_green.dds"
+	}
+
+	#leader scope
+	leader = { #scientists, commanders, officials
+		default = "gfx/models/portraits/twilek_01/twilek_humanoid_05_female_hair_green.dds"
+	}
+
+	#leader scope
+	ruler = { #for rulers
+		default = "gfx/models/portraits/twilek_01/twilek_humanoid_05_female_hair_green.dds"
+	}
+}

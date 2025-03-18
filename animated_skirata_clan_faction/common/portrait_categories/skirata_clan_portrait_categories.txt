@@ -1,0 +1,7 @@
+skirata_clan = {
+	name = SkirataClan 
+
+	sets = {
+		"skirata_clan"
+	}
+}
